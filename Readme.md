@@ -6,7 +6,7 @@ Zuerst muss müssen die oh-my-zsh erweiterungen installiert werden.
 
 Jetzt wird das eigene Repo installiert.
 
-`git clone http://gitlab.lindenbox.de/vst/zsh.git ~/.zsh`
+`git clone https://github.com/vstoppe/zsh.git`
 
 # Powerlevel 9k Theme installieren
 
