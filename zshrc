@@ -124,7 +124,7 @@ source $ZSH/oh-my-zsh.sh
 ### Source in extra aliases
 for file in ~/.zsh/*.aliases; do source $file; done
 ### Source in extra functions
-source ~/.zsh/functions
+source ~/.zsh/functions.d/*
 source ~/.oh-my-zsh/plugins/z/z.sh
 
 
