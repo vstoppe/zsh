@@ -118,7 +118,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-#eval $(ssh-agent) ssh-add
 
 
 ### Source in extra aliases
@@ -144,4 +143,4 @@ fi
 source ~/.zsh/zshenv
 
 eval "$(ssh-agent)"
-ssh-add -K
+#ssh-add -K
