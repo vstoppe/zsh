@@ -1,20 +1,25 @@
 # Installation
 
-Zuerst muss müssen die oh-my-zsh erweiterungen installiert werden.
+Install the ZSH by your package manager of trust:
+
+  ``sudo pacman -S zsh``
+
+Then install the oh-my-zsh extensions:
 
   ``sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"``
 
-Jetzt wird das eigene Repo installiert.
+Clone my git repo:
 
 `git clone https://github.com/vstoppe/zsh.git`
 
-# Powerlevel 9k Theme installieren
+# Install Powerlevel 9k theme
+
+for a fancy shell :-)
 
   ``git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k``
 
-Die installation erzeugt eine .zshrc die wir löschen um sie durch eine eigene .zshrc zu ersetzen
+The installation create a ~/.zshrc which we have to delete to link our own one:
 
   ``rm  ~/.zshrc``
-
-
+  
   ``ln -s ~/.zsh/zshrc ~/.zshrc``
