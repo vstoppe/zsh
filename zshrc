@@ -121,16 +121,18 @@ source $ZSH/oh-my-zsh.sh
 
 
 ### Source in extra aliases
-for file in ~/.zsh/*.aliases; do source $file; done
-### Source in extra functions
+#for file in ~/.zsh/*.aliases; do source $file; done
+### Source in aliases. This way we can differentiate between general aliases and those for special environments:
+source ~/.zsh/alias.d/*
 source ~/.zsh/functions.d/*
 source ~/.oh-my-zsh/plugins/z/z.sh
+### Seperate environment file for zsh:
+source ~/.zsh/zshenv
 
 
 if [ -e ~/.rbenv/bin/rbenv ]; then eval "$(rbenv init -)"; fi
 
 
-# source ~/.zsh/profile
 ### Nachladen von xmodmap Einstellungen:
 # * Vertasuchen von <> und ^°
 
@@ -140,7 +142,3 @@ if [[ `uname -s` == *"Linux"* ]]; then
 	if [ -e '/usr/bin/xmodmap' ]; then xmodmap ~/.zsh/xmodmap-linux.cfg; fi
 fi
 
-source ~/.zsh/zshenv
-
-eval "$(ssh-agent)"
-#ssh-add -K
