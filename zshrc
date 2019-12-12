@@ -79,7 +79,6 @@ source ~/.zsh/zshenv
 source ~/.zsh/puppet.cfg
 
 
-if [ -e ~/.rbenv/bin/rbenv ]; then eval "$(rbenv init -)"; fi
 
 
 ### Nachladen von xmodmap Einstellungen:
