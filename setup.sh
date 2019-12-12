@@ -24,6 +24,6 @@ if [ -e ~/.zshenv ]; then
 	mv ~/.zsh ~/.profile_backup
 fi
 
-ln -s ~/.zshrc/zshenv ~/.zshenv
+ln -s ~/.zsh/zshenv ~/.zshenv
 
 
