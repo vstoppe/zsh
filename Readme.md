@@ -8,6 +8,7 @@ This is my personal zsh working environment. It integrates the oh-my-zsh framewo
 # Notes
 
 - This config has no ssh-agent configuration for Linux. In my case it is done by a [systemd service](https://wiki.archlinux.org/index.php/SSH_keys#Start_ssh-agent_with_systemd_user)
+- This prompt might not show correct glyphs. It needs fonts with glyphs. It works with [Mononoki Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Mononoki)
 
 # Installation
 
