@@ -3,6 +3,7 @@
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	# Install oh-my-zsh:
 	echo "cloning oh-my-zsh ..."
+	# This left an empty install.sh file because curl tried to connect against 192.168.3, for what reason ever...
 	#sh -c "$(export RUNZSH=no; curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	curl https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ~/install.sh
 	export RUNZSH=no; cd ~; sh ~/install.sh; #rm -f ~/install.sh 
