@@ -9,7 +9,6 @@ export ZSH_COMPDUMP=/tmp/zcompdump-$USER
 # /opt/local/libexec/gnubin/: pfad zu den gnu coreutils
 export PATH="$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:$PATH"
 
-
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -30,8 +29,6 @@ POWERLINE_SHORT_HOST_NAME="true"
 # Base16 Shell
 BASE16_SHELL="$HOME/.zsh/oceanic-next-shell/oceanic-next.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
-
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -61,10 +58,6 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(ansible colored-man-pages docker gem git github gpg-agent minikube rails screen svn vagrant)
 
-
-source $ZSH/oh-my-zsh.sh
-
-
 source ~/.oh-my-zsh/plugins/z/z.sh
 source ~/.zsh/alias.d/* # Source in aliases.
 source ~/.zsh/functions.d/* # Source in extra shell functions
@@ -76,3 +69,7 @@ case $OSTYPE in
 	darwin*)   source ~/.zsh/macos.cfg;;
 	linux-gnu) source ~/.zsh/linux.cfg;;
 esac
+
+### oh-my-zsh has to be sourced after the osx plugin or we don't get a fancy promt...
+# https://stackoverflow.com/questions/15682456/oh-my-zsh-config-file-not-loading/15882090#15882090
+source $ZSH/oh-my-zsh.sh
