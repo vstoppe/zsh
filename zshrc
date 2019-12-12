@@ -5,12 +5,9 @@ export TERM=xterm-256color
 # without the ZSH_COMPDUMP export zsh may through bad math expression: illegal character exceptions
 export ZSH_COMPDUMP=/tmp/zcompdump-$USER
 
-# RBENV_ROOT für Powerline-Plugin setzen
-export RBENV_ROOT=$HOME/.rbenv
-
 # If you come from bash you might have to change your $PATH.
 # /opt/local/libexec/gnubin/: pfad zu den gnu coreutils
-export PATH="$HOME/.rbenv/bin:$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:/opt/puppetlabs/pdk/bin:$PATH"
+export PATH="$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:$PATH"
 
 
 # Path to your oh-my-zsh installation.
@@ -67,7 +64,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible docker gem git github gpg-agent macports minikube osx rails rbenv ruby screen svn systemd vagrant )
+plugins=(ansible docker gem git github gpg-agent macports minikube osx rails screen svn systemd vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,6 +76,7 @@ source ~/.zsh/functions.d/*
 source ~/.oh-my-zsh/plugins/z/z.sh
 ### Seperate environment file for zsh:
 source ~/.zsh/zshenv
+source ~/.zsh/puppet.cfg
 
 
 if [ -e ~/.rbenv/bin/rbenv ]; then eval "$(rbenv init -)"; fi
