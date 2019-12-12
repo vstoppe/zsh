@@ -7,7 +7,7 @@ This is my personal zsh working environment. It integrates the oh-my-zsh framewo
 
 # Notes
 
-- This config has no ssh-agent configuration for Linux. This is done in my case with a [systemd service](https://wiki.archlinux.org/index.php/SSH_keys#Start_ssh-agent_with_systemd_user)
+- This config has no ssh-agent configuration for Linux. In my case it is done by a [systemd service](https://wiki.archlinux.org/index.php/SSH_keys#Start_ssh-agent_with_systemd_user)
 
 # Installation
 
