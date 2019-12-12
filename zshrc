@@ -13,7 +13,7 @@ export PATH="$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-### Powerline Konfiguration
+### Powerline configuration:
 POWERLINE_RIGHT_A="exit-status"
 POWERLINE_RIGHT_B="time replacement"
 POWERLINE_RIGHT_C="pyenv"
@@ -64,7 +64,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible docker gem git github gpg-agent macports minikube osx rails screen svn systemd vagrant)
+plugins=(ansible colored-man-pages docker gem git github gpg-agent minikube rails screen svn vagrant)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -77,16 +78,9 @@ source ~/.oh-my-zsh/plugins/z/z.sh
 ### Seperate environment file for zsh:
 source ~/.zsh/zshenv
 source ~/.zsh/puppet.cfg
+#if [[ "$OSTYPE" = darwin* ]]; then source macos.cfg; fi
 
-
-
-
-### Nachladen von xmodmap Einstellungen:
-# * Vertasuchen von <> und ^°
-
-if [[ `uname -s` == *"Linux"* ]]; then
-	# Switch von ESC und Caps lock
-	if [ -e '/usr/bin/setxkbmap' ]; then /usr/bin/setxkbmap -option "caps:swapescape"; fi
-	if [ -e '/usr/bin/xmodmap' ]; then xmodmap ~/.zsh/xmodmap-linux.cfg; fi
-fi
-
+case $OSTYPE in
+	darwin*)   source ~/.zsh/macos.cfg;;
+	linux-gnu) source ~/.zsh/linux.cfg;;
+esac
