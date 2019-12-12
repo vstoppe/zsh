@@ -4,22 +4,19 @@ Install the ZSH by your package manager of trust:
 
   ``sudo pacman -S zsh``
 
-Then install the oh-my-zsh extensions:
-
-  ``sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"``
-
 Clone my git repo:
 
-`git clone https://github.com/vstoppe/zsh.git`
+`git clone https://github.com/vstoppe/zsh.git ~/.zsh`
 
-# Install Powerlevel 9k theme
+or
 
-for a fancy shell :-)
+`git clone git@github.com:vstoppe/zsh.git ~/.zsh`
 
-  ``git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k``
+Call
 
-The installation create a ~/.zshrc which we have to delete to link our own one:
+`~/.zsh/setup.sh`
 
-  ``rm  ~/.zshrc``
-  
-  ``ln -s ~/.zsh/zshrc ~/.zshrc``
+This will install:
+
+- oh-my-zsh
+- Powerlevel9k theme
