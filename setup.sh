@@ -20,11 +20,3 @@ if [ -e ~/.zshrc ];then
 fi
 
 ln -s ~/.zsh/zshrc ~/.zshrc
-
-if [ -e ~/.zshenv ]; then
-	mv ~/.zsh ~/.profile_backup
-fi
-
-ln -s ~/.zsh/zshenv ~/.zshenv
-
-
