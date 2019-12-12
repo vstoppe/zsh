@@ -14,23 +14,18 @@ export PATH="$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:
 export ZSH=~/.oh-my-zsh
 
 ### Powerline configuration:
+POWERLINE_DETECT_SSH="true"
+POWERLINE_NO_BLANK_LINE="true"
+POWERLINE_PATH="short"
 POWERLINE_RIGHT_A="exit-status"
 POWERLINE_RIGHT_B="time replacement"
 POWERLINE_RIGHT_C="pyenv"
-#POWERLINE_RIGHT_B="date" #  time replacement exit-status"
-POWERLINE_NO_BLANK_LINE="true"
-#POWERLINE_RIGHT_B="none"
 POWERLINE_SHORT_HOST_NAME="true"
-POWERLINE_PATH="short"
-POWERLINE_DETECT_SSH="true"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="powerline"
-#ZSH_THEME="agnoster"
-source ~/.zsh/powerlevel9k.cfg
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.zsh/oceanic-next-shell/oceanic-next.dark.sh"
@@ -70,15 +65,12 @@ plugins=(ansible colored-man-pages docker gem git github gpg-agent minikube rail
 source $ZSH/oh-my-zsh.sh
 
 
-### Source in aliases. This way we can differentiate between general aliases and those for special environments:
-source ~/.zsh/alias.d/*
-# Source in extra shell functions
-source ~/.zsh/functions.d/*
 source ~/.oh-my-zsh/plugins/z/z.sh
-### Seperate environment file for zsh:
-source ~/.zsh/zshenv
+source ~/.zsh/alias.d/* # Source in aliases.
+source ~/.zsh/functions.d/* # Source in extra shell functions
+source ~/.zsh/powerlevel9k.cfg
 source ~/.zsh/puppet.cfg
-#if [[ "$OSTYPE" = darwin* ]]; then source macos.cfg; fi
+source ~/.zsh/zshenv # Seperate environment file for zsh:
 
 case $OSTYPE in
 	darwin*)   source ~/.zsh/macos.cfg;;
