@@ -70,6 +70,8 @@ case $OSTYPE in
 	linux-gnu) source ~/.zsh/linux.cfg;;
 esac
 
-### oh-my-zsh has to be sourced after the osx plugin or we don't get a fancy promt...
+### oh-my-zsh has to be sourced after 
+# * the osx plugin or we don't get a fancy promt...
+# * and ssh-agent
 # https://stackoverflow.com/questions/15682456/oh-my-zsh-config-file-not-loading/15882090#15882090
 source $ZSH/oh-my-zsh.sh
