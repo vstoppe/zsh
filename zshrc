@@ -60,7 +60,7 @@ plugins=(ansible colored-man-pages docker gem git github gpg-agent minikube rail
 
 source ~/.oh-my-zsh/plugins/z/z.sh
 source ~/.zsh/alias.d/* # Source in aliases.
-source ~/.zsh/functions.d/* # Source in extra shell functions
+source ~/.zsh/functions.d/*.cfg # Source in extra shell functions
 source ~/.zsh/powerlevel9k.cfg
 source ~/.zsh/puppet.cfg
 source ~/.zsh/zshenv # Seperate environment file for zsh:
