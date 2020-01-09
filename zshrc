@@ -65,6 +65,11 @@ source ~/.zsh/powerlevel9k.cfg
 source ~/.zsh/puppet.cfg
 source ~/.zsh/zshenv # Seperate environment file for zsh:
 
+### Source in aliases
+# source ~/.zsh/alias.d/* # Source in aliases. # <- this only works for the first file. 2nd file ignored
+for file in `find ~/.zsh/alias.d -type f`; do source $file; done
+
+
 case $OSTYPE in
 	darwin*)   source ~/.zsh/macos.cfg;;
 	linux-gnu) source ~/.zsh/linux.cfg;;
