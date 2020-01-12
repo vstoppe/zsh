@@ -56,7 +56,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible colored-man-pages docker gem git github gpg-agent minikube rails screen svn vagrant)
+plugins=(ansible colorize colored-man-pages docker gem git github gpg-agent minikube rails screen svn vagrant)
 
 source ~/.oh-my-zsh/plugins/z/z.sh
 source ~/.zsh/alias.d/* # Source in aliases.
