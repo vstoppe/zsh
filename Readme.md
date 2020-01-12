@@ -1,6 +1,12 @@
 # Abstract
 
-This is my personal zsh working environment. It integrates the oh-my-zsh framework, the Powerlevel 9k theme and a bunch of enabled plugins. It is tested on:
+This is my personal zsh working environment. It integrates the 
+* [oh-my-zsh framework](https://github.com/ohmyzsh/ohmyzsh)
+* [Powerlevel 9k theme](https://github.com/Powerlevel9k/powerlevel9k)
+* [zsh syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+* and a bunch of other plugins. 
+
+It is tested on:
 
 - Arch Linux
 - Macos
