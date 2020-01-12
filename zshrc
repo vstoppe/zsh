@@ -75,6 +75,11 @@ case $OSTYPE in
 	linux-gnu) source ~/.zsh/linux.cfg;;
 esac
 
+
+# ZSH syntax highlighting must be activated after all other plugins:
+export plugins=($plugins zsh-syntax-highlighting)
+
+
 ### oh-my-zsh has to be sourced after 
 # * the osx plugin or we don't get a fancy promt...
 # * and ssh-agent
