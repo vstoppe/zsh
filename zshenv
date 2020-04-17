@@ -10,6 +10,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 ### provide $HOSTNAME like in BASH
 export HOSTNAME=`hostname`
 
+if [ -e $HOME/workspace/docker/etc/$HOSTNAME.env ]; then export $(cut -d= -f1 $HOME/workspace/docker/etc/$HOSTNAME.env); fi
+
 ### if Kwallet is installed then use it for sotring ssh-key passwords" 
 if [ -f "`which kwalletd5`" ]; then export SSH_ASKPASS="/usr/bin/ksshaskpass"; fi
 
