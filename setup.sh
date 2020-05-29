@@ -30,7 +30,7 @@ fi
 ln -s ~/.zsh/zshrc ~/.zshrc
 
 
-if [ `which port` ]; then
+if [ `which port 2>/dev/null` ]; then
 	if [ `port list py-pygments | wc -l` -eq 0 ]; then
 		echo "* Installing colorize dependencies by port"
 		sudo port install py-pygments
@@ -40,5 +40,18 @@ if [ `which port` ]; then
 		sudo port select --set pygments py${PYTHON_VERSION}-pygments
 		set +x
 	else echo "* colorize plugin dependencies already installed"
+	fi
+fi
+
+if [ `which pacman` ]; then
+	if [ `pacman -Q | grep pygmentize | wc -l` -eq 0 ]; then
+		echo "* Installing colorize dependencies by pacman"
+		sudo pacman -S pygmentize
+	else echo "* colorize plugin dependencies already installed"
+	fi
+	if [ `pip list | grep Pygment | wc -l` -eq 0 ]; then
+		echo "* installing colorize plugin dependency Pygment by pip"
+		sudo pip install Pygments
+	else echo "* dependency pip package Pygment already installed"
 	fi
 fi
