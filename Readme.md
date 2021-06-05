@@ -20,8 +20,12 @@ It is tested on:
 
 Install the ZSH by your package manager of trust:
 
-  ``sudo pacman -S zsh``
-
+  `sudo pacman -S zsh`
+  
+  or
+  
+  `sudo apt install zsh`
+  
 Clone my git repo:
 
 `git clone https://github.com/vstoppe/zsh.git ~/.zsh`
