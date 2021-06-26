@@ -13,12 +13,14 @@ export PATH="$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:
 export ZSH=~/.oh-my-zsh
 
 ### Powerline configuration:
-POWERLINE_DETECT_SSH="true"
+POWERLINE_DETECT_SSH="false"
 POWERLINE_NO_BLANK_LINE="true"
 POWERLINE_PATH="short"
-POWERLINE_RIGHT_A="exit-status"
+#POWERLINE_RIGHT_A="exit-status"
+POWERLINE_RIGHT_A="status virtualenv exit-status"
 POWERLINE_RIGHT_B="time replacement"
-POWERLINE_RIGHT_C="pyenv"
+# pyenv seems to slow down things:
+#POWERLINE_RIGHT_C="pyenv"
 POWERLINE_SHORT_HOST_NAME="true"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -56,7 +58,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible colorize colored-man-pages docker gem git github gpg-agent helm kubectl minikube rails screen svn vagrant)
+plugins=(ansible colorize colored-man-pages docker gem git github gpg-agent helm kubectl minikube rails screen svn vagrant virtualenv)
+#plugins=()
 
 source ~/.oh-my-zsh/plugins/z/z.sh
 source ~/.zsh/alias.d/* # Source in aliases.
@@ -80,7 +83,7 @@ esac
 export plugins=($plugins zsh-syntax-highlighting)
 
 
-### oh-my-zsh has to be sourced after 
+### oh-my-zsh has to be sourced after
 # * the osx plugin or we don't get a fancy promt...
 # * and ssh-agent
 # https://stackoverflow.com/questions/15682456/oh-my-zsh-config-file-not-loading/15882090#15882090
