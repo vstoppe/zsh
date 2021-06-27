@@ -21,7 +21,12 @@ if [ -d /etc/profile.d ]; then
 fi
 
 
-if [ -e $HOME/workspace/docker/etc/$HOSTNAME.env ]; then source $HOME/workspace/docker/etc/$HOSTNAME.env; fi
+DOCKER_VAR_FILE="$HOME/workspace/docker/etc/$HOSTNAME.env"
+if [ -e $DOCKER_VAR_FILE  ]; then
+	source $DOCKER_VAR_FILE
+	export $(cut -d= -f1 $DOCKER_VAR_FILE)
+fi
+
 
 ### if Kwallet is installed then use it for sotring ssh-key passwords"
 if [ -f "`which kwalletd5`" ]; then export SSH_ASKPASS="/usr/bin/ksshaskpass"; fi
