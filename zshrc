@@ -64,7 +64,7 @@ plugins=(ansible colorize colored-man-pages docker gem git github gpg-agent helm
 
 source ~/.oh-my-zsh/plugins/z/z.sh
 source ~/.zsh/alias.d/* # Source in aliases.
-source ~/.zsh/functions.d/*.cfg # Source in extra shell functions
+source ~/.zsh/functions.d/*.cfg
 source ~/.zsh/powerlevel9k.cfg
 source ~/.zsh/puppet.cfg
 source ~/.zsh/zshenv # Seperate environment file for zsh:
@@ -89,3 +89,9 @@ export plugins=($plugins zsh-syntax-highlighting)
 # * and ssh-agent
 # https://stackoverflow.com/questions/15682456/oh-my-zsh-config-file-not-loading/15882090#15882090
 source $ZSH/oh-my-zsh.sh
+
+
+### Setup iterm2 integration
+# Source iTerm2 integration
+test -e ~/.iterm2_shell_integration.zsh && source /Users/vst/.iterm2_shell_integration.zsh || true
+source ~/.zsh/iterm2.cfg
