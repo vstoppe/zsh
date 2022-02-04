@@ -5,7 +5,8 @@ export EDITOR="nvim"
 export SYSTEMD_PAGER=''
 
 ### Set Socket for ssh-agent
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# (worked on Arch noch don Debian anymore)
+#export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 ### provide $HOSTNAME like in BASH
 export HOSTNAME=`hostname`
