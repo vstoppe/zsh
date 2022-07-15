@@ -59,7 +59,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible colorize colored-man-pages docker gem git github gpg-agent helm kubectl minikube rails screen svn vagrant virtualenv)
+plugins=(ansible colorize colored-man-pages docker gem git github gpg-agent helm kubectl kube-ps1 minikube rails screen svn vagrant virtualenv)
 #plugins=()
 
 source ~/.oh-my-zsh/plugins/z/z.sh
@@ -95,3 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # Source iTerm2 integration
 test -e ~/.iterm2_shell_integration.zsh && source /Users/vst/.iterm2_shell_integration.zsh || true
 source ~/.zsh/iterm2.cfg
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/vst/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
