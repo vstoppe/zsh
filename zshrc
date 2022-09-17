@@ -7,7 +7,7 @@ export ZSH_COMPDUMP=/tmp/zcompdump-$USER
 
 # If you come from bash you might have to change your $PATH.
 # /opt/local/libexec/gnubin/: pfad zu den gnu coreutils
-export PATH="$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:/opt/local/libexec/gnubin/:/usr/local/bin:/opt/local/bin:$PATH"
 if [ -d $HOME/Library/Python/3.9/bin/ ]; then export PATH=$PATH:$HOME/Library/Python/3.9/bin/; fi
 
 # Path to your oh-my-zsh installation.
