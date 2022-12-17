@@ -11,7 +11,7 @@ alias ws="cd ~/workspace"
 alias ws3="cd ~/workspace/k3s"
 alias wsa="cd ~/workspace/ansible"
 alias wsd="cd ~/workspace/docker"
-alias wsk="cd ~/workspace/k3os"
+alias wsk="cd ~/workspace/k3s"
 alias wsp="cd ~/workspace/puppet"
 alias wsp="cd ~/workspace/python"
 alias wsr="cd ~/workspace/ruby"
@@ -21,4 +21,9 @@ alias ws8="cd ~/workspace/k8s"
 alias wsv="cd ~/workspace/virt"
 
 
+### git 
 alias gs="git status"
+alias gp="git push"
+
+### K8S
+alias kns="kubens"
