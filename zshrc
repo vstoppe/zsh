@@ -105,3 +105,8 @@ export PATH="/Users/vst/.rd/bin:$PATH"
 
 source /opt/local/share/fzf/shell/key-bindings.zsh
 source /opt/local/share/fzf/shell/completion.zsh
+
+### kubecolor integration
+alias kubectl="kubecolor --light-background"
+# make completion work with kubecolor
+compdef kubecolor=kubectl
