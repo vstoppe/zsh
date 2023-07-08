@@ -1,5 +1,5 @@
 ### My favourite editor :-)
-export EDITOR="nvim"
+export EDITOR="vim"
 
 ### Disable pager for systemd
 export SYSTEMD_PAGER=''
