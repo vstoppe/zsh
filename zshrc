@@ -63,7 +63,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(ansible colorize colored-man-pages docker gem git github gpg-agent helm kubectl kube-ps1 minikube rails screen svn vagrant virtualenv)
 #plugins=()
 
-source ~/.oh-my-zsh/plugins/z/z.sh
+# source ~/.oh-my-zsh/plugins/z/z.sh
 source ~/.zsh/alias.d/* # Source in aliases.
 source ~/.zsh/functions.d/*.cfg
 source ~/.zsh/powerlevel9k.cfg
@@ -103,8 +103,8 @@ export PATH="/Users/vst/.rd/bin:$PATH"
 
 ### FZF settings:
 
-source /opt/local/share/fzf/shell/key-bindings.zsh
-source /opt/local/share/fzf/shell/completion.zsh
+# source /opt/local/share/fzf/shell/key-bindings.zsh
+# source /opt/local/share/fzf/shell/completion.zsh
 
 ### kubecolor integration
 alias kubectl="kubecolor --light-background"
